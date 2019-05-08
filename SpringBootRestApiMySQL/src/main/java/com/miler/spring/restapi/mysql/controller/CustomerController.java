@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.miler.spring.restapi.mysql.model.Customer;
 import com.miler.spring.restapi.mysql.repo.CustomerRepository;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://aw-angular8-spring-boot.herokuapp.com")
 @RestController
 @RequestMapping("/api")
 public class CustomerController {
