@@ -1,6 +1,12 @@
 package com.miler.spring.restapi.mysql.controller;
 
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.Format;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.miler.spring.restapi.mysql.model.Pessoa;
 import com.miler.spring.restapi.mysql.repo.PessoaRepository;
 
-@CrossOrigin(origins = "https://aw-angular8-spring-boot.herokuapp.com")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
 public class PessoaController {
@@ -57,6 +63,16 @@ public class PessoaController {
 
 	@PostMapping(value = "/pessoas")
 	public ResponseEntity<Pessoa> postPessoas(@RequestBody Pessoa pessoa) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	    Date parsedDate;
+		try {
+			parsedDate = dateFormat.parse(pessoa.getDataNascimento().toString());
+			Timestamp timestamp = new java.sql.Timestamp(parsedDate.getTime());
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	    
 		try {
 			Pessoa _pessoa = repository.save(new Pessoa(pessoa.getNome(), pessoa.getCpf(), 
 					pessoa.getDataNascimento(), pessoa.getPeso(), pessoa.getUf()));
@@ -77,7 +93,7 @@ public class PessoaController {
 	}
 
 	@DeleteMapping("/pessoas")
-	public ResponseEntity<HttpStatus> deleteAllPessoas() {
+	public ResponseEntity<HttpStatus> deleteAllPessoa() {
 		try {
 			repository.deleteAll();
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -104,7 +120,7 @@ public class PessoaController {
 	@PutMapping("/pessoas/{id}")
 	public ResponseEntity<Pessoa> updatePessoa(@PathVariable("id") Integer id, @RequestBody Pessoa pessoa) {
 		Optional<Pessoa> pessoaData = repository.findById(id);
-
+	
 		if (pessoaData.isPresent()) {
 			Pessoa _pessoa = pessoaData.get();
 			_pessoa.setNome(pessoa.getNome());

@@ -11,6 +11,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "pessoa")
 public class Pessoa {
@@ -29,9 +31,7 @@ public class Pessoa {
 	
 	@Id
 	@Column
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@GeneratedValue(generator = "increment")
-	@GenericGenerator(name = "increment", strategy = "increment")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column
 	private String nome;
