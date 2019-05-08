@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Implementation-Title: SpringBootRestApiMySQL
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: miler
-Implementation-Vendor-Id: com.grokonez
+Implementation-Vendor-Id: miler
 Build-Jdk: 1.8.0_191
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/spring-boot-restapi-mysql
