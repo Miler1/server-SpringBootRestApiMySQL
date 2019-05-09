@@ -11,11 +11,16 @@ cd "SpringBootRestApiMySQL"
 dentro da pasta executar o comando:
 "mvn spring-boot:run"
 
-esse comando instala as dependencias do maven quando é executado pela primeira vez e depois executa o servidor.
+O comando acima instala as dependencias do maven quando é executado pela primeira vez e depois executa o servidor.
 
-caso o comando exibir a seguinte mensagem: "The JAVA_HOME environment variable is not defined correctly
-This environment variable is needed to run this program
-NB: JAVA_HOME should point to a JDK not a JRE" 
+caso o comando exibir a seguinte mensagem: 
+# "The JAVA_HOME environment variable is not defined correctly This environment variable is needed to run this program NB: JAVA_HOME should point to a JDK not a JRE" 
 
 basta executar o comando:
 "export PATH=$JAVA_HOME/jre/bin:$PATH" na qual permitirá a execução do comando do maven normalmente.
+
+Para executar o servidor em modo de produção basta executar os comandos:
+# Construir o projeto
+mvn package 
+# Executar o servidor 
+java -jar target/spring-boot-restapi-mysql-0.0.1-SNAPSHOT.jar
