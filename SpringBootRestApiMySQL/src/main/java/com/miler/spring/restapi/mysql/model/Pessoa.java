@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -34,14 +36,20 @@ public class Pessoa {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column
+	@NotNull
+	@NotBlank(message = "O campo Nome é obrigatório")
 	private String nome;
 	@Column
+	@NotNull
+	@NotBlank(message = "O campo CPF é obrigatório")
 	private String cpf;
 	@Column
 	private Date dataNascimento;
 	@Column 
 	private int peso;
 	@Column 
+	@NotNull
+	@NotBlank(message = "O campo Estado é obrigatório")
 	private String uf;
 	
 	public int getId() {

@@ -1,0 +1,4 @@
+com/miler/spring/restapi/mysql/repo/PessoaRepository.class
+com/miler/spring/restapi/mysql/SpringBootRestApiMySqlApplication.class
+com/miler/spring/restapi/mysql/controller/PessoaController.class
+com/miler/spring/restapi/mysql/model/Pessoa.class
