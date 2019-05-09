@@ -14,7 +14,7 @@ dentro da pasta executar o comando:
 O comando acima instala as dependencias do maven quando é executado pela primeira vez e depois executa o servidor.
 
 caso o comando exibir a seguinte mensagem: 
-# "The JAVA_HOME environment variable is not defined correctly This environment variable is needed to run this program NB: JAVA_HOME should point to a JDK not a JRE" 
+"The JAVA_HOME environment variable is not defined correctly This environment variable is needed to run this program NB: JAVA_HOME should point to a JDK not a JRE" 
 
 basta executar o comando:
 "export PATH=$JAVA_HOME/jre/bin:$PATH" na qual permitirá a execução do comando do maven normalmente.
