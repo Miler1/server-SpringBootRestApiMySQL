@@ -44,6 +44,10 @@ public class PessoaController {
 				System.out.println("Vazio");
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
+			System.out.println(pessoas);
+			for (Pessoa pessoa : pessoas) {
+				System.out.println(pessoa.getNome());
+			}
 			return new ResponseEntity<>(pessoas, HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
