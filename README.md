@@ -1,6 +1,6 @@
 # server-SpringBootRestApiMySQL
 
-O servidor foi implementado na linguagem java com Spring Boot que é baseada no Spring e para o armazenamento de dados foi utilizado o servidor MySQL na versão 8.
+O servidor foi implementado na linguagem java com Spring Boot que é baseada no Spring e para o armazenamento de dados foi utilizado o servidor MySQL na versão 8. O arquivo "db1-backup-2019-05-13.sql" contém o script para a criação do banco de dados.
 
 Para executar o servidor spring boot deverão ser executadas as seguintes etapas:
 
