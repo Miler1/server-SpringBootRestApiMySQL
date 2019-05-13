@@ -2,8 +2,8 @@
 
 Para executar o servidor spring boot deverão ser executadas as seguintes etapas:
 
-baixar o arquivo do servidor no repositorio do git com o seguinte comando:
-"git clone https://github.com/Miler1/server-SpringBootRestApiMySQL.git"
+# baixar o arquivo do servidor no repositorio do git com o seguinte comando:
+git clone (https://github.com/Miler1/server-SpringBootRestApiMySQL.git)
 
 após baixar o arquivo entrar dentro da pasta do repositório com o comando:
 cd "SpringBootRestApiMySQL"
