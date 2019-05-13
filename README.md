@@ -1,6 +1,6 @@
 # server-SpringBootRestApiMySQL
 
-O servidor foi implementado na linguagem java com Spring Boot que é baseada no Spring.
+O servidor foi implementado na linguagem java com Spring Boot que é baseada no Spring e para o armazenamento de dados foi utilizado o servidor MySQL.
 
 Para executar o servidor spring boot deverão ser executadas as seguintes etapas:
 
