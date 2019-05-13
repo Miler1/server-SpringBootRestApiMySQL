@@ -1,5 +1,7 @@
 # server-SpringBootRestApiMySQL
 
+O servidor foi implementado na linguagem java com Spring Boot que é baseada no Spring.
+
 Para executar o servidor spring boot deverão ser executadas as seguintes etapas:
 
 # baixar o arquivo do servidor no repositorio do git com o seguinte comando:
