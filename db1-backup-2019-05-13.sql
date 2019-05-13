@@ -24,11 +24,11 @@ DROP TABLE IF EXISTS `pessoa`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `pessoa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cpf` varchar(255) NOT NULL,
-  `data_nascimento` datetime DEFAULT NULL,
+  `cpf` varchar(14) NOT NULL,
+  `data_nascimento` DATE DEFAULT NULL,
   `nome` varchar(255) NOT NULL,
   `peso` int(11) DEFAULT NULL,
-  `uf` varchar(255) NOT NULL,
+  `uf` char(2) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -39,7 +39,7 @@ CREATE TABLE `pessoa` (
 
 LOCK TABLES `pessoa` WRITE;
 /*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
-INSERT INTO `pessoa` VALUES (28,'08709455647','1987-06-04 12:00:00','Miler Grudtner Boell',66,'MG');
+INSERT INTO `pessoa` VALUES (28,'08709455647','1987-06-04','Miler Grudtner Boell',66,'MG');
 /*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
